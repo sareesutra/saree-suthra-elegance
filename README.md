@@ -1,73 +1,165 @@
-# Welcome to your Lovable project
+# Saree CRM - Customer Relationship Management System
 
-## Project info
+## About
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A comprehensive Customer Relationship Management (CRM) system built with modern web technologies. This CRM helps businesses manage customer relationships, track leads, manage activities, and close deals efficiently.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+### 📊 Dashboard
+- Real-time statistics and KPIs
+- Total customers, active leads, and deals overview
+- Activities tracking this week
+- Conversion rate analytics
+- Recent activity feed
+- Top deals visualization
 
-**Use Lovable**
+### 👥 Customer Management
+- Add, edit, and delete customers
+- Comprehensive customer profiles with contact information
+- Customer status tracking (Active, Inactive, Lead)
+- Search and filter capabilities
+- Tag and categorization system
+- Notes and communication history
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 🎯 Lead Management
+- Lead pipeline tracking
+- Multiple lead stages (New, Contacted, Qualified, Proposal, Negotiation, Won, Lost)
+- Lead value and probability tracking
+- Expected close date monitoring
+- Lead source tracking
+- Assignment to team members
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📅 Activity Management
+- Track calls, emails, meetings, tasks, and notes
+- Priority levels (Low, Medium, High)
+- Status tracking (Pending, Completed, Cancelled)
+- Due date reminders
+- Activity history for customers and leads
+- Quick status updates
 
-**Use your preferred IDE**
+## Technologies Used
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **UI Components**: shadcn/ui (Radix UI)
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **State Management**: React Query
+- **Forms**: React Hook Form + Zod
+- **Data Storage**: LocalStorage (persistent client-side storage)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Installation & Setup
 
-Follow these steps:
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Local Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd saree-suthra-elegance
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```sh
+# Create optimized production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+This CRM can be deployed to various platforms:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will auto-detect Vite and deploy
+4. Your CRM will be live at `https://your-project.vercel.app`
 
-## How can I deploy this project?
+### Netlify
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Build settings are configured in `netlify.toml`
+4. Your CRM will be live at `https://your-project.netlify.app`
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Manual Deployment
+After running `npm run build`, upload the `dist` folder to any static hosting service.
 
-## Can I connect a custom domain to my Lovable project?
+## Usage
 
-Yes, you can!
+### Sample Data
+The CRM comes pre-populated with sample data including:
+- 2 sample customers
+- 2 sample leads
+- 2 sample activities
+- 1 sample deal
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Adding Your Data
+1. Navigate to the respective section (Customers, Leads, or Activities)
+2. Click the "Add" button
+3. Fill in the form with your data
+4. Submit to save
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Managing Data
+- **Edit**: Click the pencil icon on any card
+- **Delete**: Click the trash icon (confirmation required)
+- **Search**: Use the search bar to filter results
+- **Filter**: Use status filters to narrow down results
+
+## Data Persistence
+
+All data is stored in the browser's LocalStorage, ensuring:
+- ✅ No backend required
+- ✅ Data persists across sessions
+- ✅ Fast performance
+- ✅ Privacy-friendly
+- ⚠️ Note: Data is stored locally per browser/device
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+│   ├── ui/          # shadcn/ui components
+│   └── CRMNav.tsx   # Navigation component
+├── pages/           # Page components
+│   ├── Dashboard.tsx
+│   ├── Customers.tsx
+│   ├── Leads.tsx
+│   └── Activities.tsx
+├── types/           # TypeScript type definitions
+│   └── crm.ts
+├── lib/            # Utility functions
+│   └── storage.ts  # LocalStorage operations
+└── App.tsx         # Main app component
+```
+
+## Contributing
+
+This is a private project. For contribution guidelines, please contact the repository owner.
+
+## License
+
+Private - All rights reserved
+
+## Support
+
+For support or questions, please contact the development team.
