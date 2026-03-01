@@ -201,7 +201,7 @@ const Leads = () => {
                   </div>
                   <div>
                     <Label htmlFor="status">Status</Label>
-                    <Select value={formData.status} onValueChange={(value: any) => setFormData({ ...formData, status: value })}>
+                    <Select value={formData.status} onValueChange={(value) => setFormData({ ...formData, status: value as Lead['status'] })}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>

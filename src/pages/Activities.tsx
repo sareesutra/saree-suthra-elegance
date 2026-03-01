@@ -93,7 +93,7 @@ const Activities = () => {
   };
 
   const handleStatusChange = (id: string, newStatus: Activity['status']) => {
-    const updates: any = { status: newStatus };
+    const updates: Partial<Activity> = { status: newStatus };
     if (newStatus === 'completed') {
       updates.completedDate = new Date().toISOString();
     }
@@ -187,7 +187,7 @@ const Activities = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="type">Type</Label>
-                    <Select value={formData.type} onValueChange={(value: any) => setFormData({ ...formData, type: value })}>
+                    <Select value={formData.type} onValueChange={(value) => setFormData({ ...formData, type: value as Activity['type'] })}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>
@@ -202,7 +202,7 @@ const Activities = () => {
                   </div>
                   <div>
                     <Label htmlFor="priority">Priority</Label>
-                    <Select value={formData.priority} onValueChange={(value: any) => setFormData({ ...formData, priority: value })}>
+                    <Select value={formData.priority} onValueChange={(value) => setFormData({ ...formData, priority: value as Activity['priority'] })}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>
@@ -233,7 +233,7 @@ const Activities = () => {
                   </div>
                   <div>
                     <Label htmlFor="relatedTo">Related To</Label>
-                    <Select value={formData.relatedTo} onValueChange={(value: any) => setFormData({ ...formData, relatedTo: value })}>
+                    <Select value={formData.relatedTo} onValueChange={(value) => setFormData({ ...formData, relatedTo: value as Activity['relatedTo'] })}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>
@@ -254,7 +254,7 @@ const Activities = () => {
                   </div>
                   <div>
                     <Label htmlFor="status">Status</Label>
-                    <Select value={formData.status} onValueChange={(value: any) => setFormData({ ...formData, status: value })}>
+                    <Select value={formData.status} onValueChange={(value) => setFormData({ ...formData, status: value as Activity['status'] })}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>
